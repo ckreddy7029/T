@@ -41,9 +41,7 @@
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
 			}
-			$query="SELECT distinct c.reviewID, c.MovieName, c.MoviePoster, c.MovieCastNCrew, c.MoviePositives, c.MovieNegatives,
-      c.MovieRating, c.MovieSingleLineReview, c.MovieReview, c.MovieDirector , c.MovieProducer, c.MovieMusic,
-      c.MovieStory, c.MovieTech FROM reviews c order by c.reviewID desc";
+			$query="SELECT distinct c.reviewID, c.MovieName, c.MoviePoster, c.MovieCastNCrew FROM review c order by c.reviewID desc";
 			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 
 			if($r->num_rows > 0){
