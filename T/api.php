@@ -18,7 +18,7 @@
 		}
 
 		/*
-		 *  Connect to Database
+		 *  story1 commit
 		*/
 		private function dbConnect(){
 			$this->mysqli = new mysqli(self::DB_SERVER, self::DB_USER, self::DB_PASSWORD, self::DB);
